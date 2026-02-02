@@ -49,15 +49,7 @@ Since this repository contains multiple independent projects, you need to naviga
     cd BTTH_01  # Replace with actual folder name
     ```
 
-3.  Install dependencies (if applicable):
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4.  Run the server:
-    ```bash
-    python manage.py runserver
-    ```
+3.  Run the file using html readers
 
 ---
 
