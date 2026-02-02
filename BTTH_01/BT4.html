@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BT 04</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         table {
             width: 100%;
@@ -11,29 +12,234 @@
         th, td {
             text-align: left;
         }
+        th {
+            width: 30%;
+            padding: 8px;
+        }
+        td input[type="text"], td input[type="date"], td input[type="password"], td input[type="email"], td input[type="tel"] {
+            padding: 4px;
+            width: 100%;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #8a8a8a;
+        }
+        body h1 {
+            font-size: large;
+            margin-bottom: 5px;
+        }
+        td select {
+            width: 30%; 
+            padding: 4px;
+        }
+        .fn_btn {
+            padding: 10px 20px;
+            margin-right: 10px;
+            font-size: 16px;
+            text-align: right;
+        }
+        .fn_btn button {
+            padding: 10px 20px;
+            margin-right: 0px;
+            font-size: 16px;
+            background-color: #414141;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+        }
     </style>
 </head>
 <body>
-    <header>
-        Basic Info
-    </header>
-    <form action="">
-        <table>
-            <tr><th>Employee ID</th><td>9</td></tr>
-            <tr><th>Last Name</th><td>Dodsworth</td></tr>
-            <tr><th>First Name</th><td>Anne</td></tr>
-            <tr>
-                <th>Gender</th>
-                <td>
-                    <ul style="list-style-type: none; padding: 0; margin: 0;">
-                        <input type="radio" name="gender" value="male"> Male
-                        <input type="radio" name="gender" value="female"> Female
-                        <input type="radio" name="gender" value="xxx"> XXX
-                        <input type="radio" name="gender" value="zzz"> ZZZ
-                    </ul>
-                </td>
-            </tr>
-        </table>
-    </form>
+    <div id="container" class="container">
+        <form action="/submit-form" method="post">
+            <h1>Basic Info</h1>
+            <hr>
+            <table class="basic_info">
+                <tr><th>Employee ID</th><td>9</td></tr>
+                <tr><th>Last Name</th><td>Dodsworth</td></tr>
+                <tr>
+                    <th>First Name</th>
+                    <td>
+                        <input type="text" name="first_name" value="" id="first_name" placeholder="Anne">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Gender</th>
+                    <td>
+                        <ul style="list-style-type: none; padding: 0; margin: 0;">
+                            <li>
+                                <input type="radio" name="gender" value="male" id="gender-male">
+                                <label for="gender-male">Male</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="gender" value="female" id="gender-female">
+                                <label for="gender-female">Female</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="gender" value="xxx" id="gender-xxx">
+                                <label for="gender-xxx">XXX</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="gender" value="zzz" id="gender-zzz">
+                                <label for="gender-zzz">ZZZ</label>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Title</th>
+                    <td>
+                        <input type="text" name="title" value="" id="title" placeholder="Sales Representative">
+                    </td>  
+                </tr>
+                <tr>
+                    <th>Suffix</th>
+                    <td>
+                        <input type="text" name="suffix" value="" id="suffix" placeholder="Ms.">
+                    </td>
+                </tr>
+                <tr>
+                    <th>BirthDate</th>
+                    <td>
+                        <input type="date" name="birthdate" value="" id="birthdate" placeholder="MM-DD-YYYY">
+                    </td>
+                </tr>
+                <tr>
+                    <th>HireDate</th>
+                    <td>
+                        <input type="date" name="hiredate" value="" id="hiredate" placeholder="MM-DD-YYYY">
+                    </td>
+                </tr>
+                <tr>
+                    <th>SSN</th>
+                    <td>
+                        <input type="password" name="ssn" value="" id="ssn">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Reports To</th>
+                    <td>
+                        <select name="report-to" id="employee">
+                            <option value="buchanan">Buchanan</option>
+                            <option value="fuller">Fuller</option>
+                            <option value="leverling">Leverling</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <br>
+
+
+            <h1>Contact Info</h1>
+            <hr>
+            <table class="contact_info">
+                <tr>
+                    <th>Email</th>
+                    <td>
+                        <input type="email" name="email" value="" id="email" placeholder="name@example.com">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td>
+                        <input type="text" name="address" id="address">
+                    </td>
+                </tr>
+                <tr>
+                    <th>City</th>
+                    <td>
+                        <input type="text" name="city" value="" id="city" placeholder="London">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Region</th>
+                    <td>
+                        <input type="text" name="region" id="region">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Postal Code</th>
+                    <td>
+                        <input type="text" name="postal_code" value="" id="postal_code">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Country</th>
+                    <td>
+                        <select name="country" id="country">
+                            <option value="russia_federation">Russia Federation</option>
+                            <option value="vietnam">Vietnam</option>
+                            <option value="united_kingdom" selected>United Kingdom</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>US Home Phone</th>
+                    <td>
+                        <input type="tel" name="phone" value="" id="phone" placeholder="(###)###-####">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Photo</th>
+                    <td>
+                        <input type="file" name="photo" value="" id="photo">
+                    </td>
+                </tr>
+            </table> 
+            <br>
+
+            <h1>Optional Info</h1>
+            <hr>
+            <table class="optional_info">
+                <tr>
+                    <th>Notes</th>
+                    <td>
+                        <textarea name="notes" id="notes" rows="4" cols="50" placeholder="Enter notes here..." style="width: 100%;"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Preferred Shift</th>
+                    <td>
+                        <ul style="list-style-type: none; width: 100%; padding: 0; margin: 0; gap: 10px;">
+                            <li>
+                                <input type="checkbox" name="shift" value="regular" id="regular">
+                                <label for="regular">Regular</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="shift" value="Gravy Yard" id="Gravy_Yard">
+                                <label for="Gravy_Yard">Gravy Yard</label>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Active?</th>
+                    <td>
+                        <input type="checkbox" name="active" value="yes" id="active" checked>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Are you human?</th>
+                    <td></td>
+                </tr>
+            </table>
+            <br>
+            
+            <div id="fn_btn" class="fn_btn">
+                <button type="submit"><i class="fa-regular fa-floppy-disk"></i>  Submit</button>
+                <button type="reset"><i class="fa-solid fa-xmark"></i>  Cancel</button>
+            </div>
+            <p><strong>* required</strong></p>
+        </form>
+    </div>
 </body>
 </html>
