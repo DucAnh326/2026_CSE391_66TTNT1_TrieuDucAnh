@@ -1,52 +1,39 @@
-# ##### [COURSE NAME - e.g., Web Development Fundamentals]
+Web Development Fundamentals
 
-## 📘 Repository Overview
+## Repository Overview
 This repository serves as a comprehensive collection of my coursework, practical exercises, and projects for the **Web Development Fundamentals** course.
 
 It documents my learning path from basic HTML/CSS layouts to full-stack web application development with Python and Django.
 
-## 👨‍🎓 Student Information
+## Student Information
 
 | Category | Information |
-| :--- | :--- |
-| **Student Name** | ##### |
-| **Student ID** | ##### |
-| **Class** | ##### |
-| **Instructor** | ##### |
+| :---     | :---        |
+| **Student Name** | Trieu Duc Anh |
+| **Student ID** | 2451260977 |
+| **Class** | 66TTNT1 |
+| **Instructor** | Mr. Ta Chi Hai |
 
 ---
 
-## 📂 Project Directory
+## Project Directory
 
 This repository is organized into several modules/assignments:
 
-### 🏆 Final Project: giadung.vn
-**Location:** `/giadung_vn` (or `#####`)
-* **Description:** A complete e-commerce web application for selling household appliances.
-* **Key Features:** Product management, shopping cart, user authentication, and order processing.
-* **Tech Stack:** Django, SQLite, Bootstrap 5.
 
-### 🧪 Labs & Exercises
-* **Lab 01 - HTML/CSS Basics:** `/lab01` - Introduction to page structure and styling.
-* **Lab 02 - JavaScript Interaction:** `/lab02` - DOM manipulation and basic logic.
-* **Lab 03 - Python/Django Setup:** `/lab03` - Setting up the environment and first views.
-* **Assignment #####:** `/#####` - ##### [Brief description].
+### Labs & Exercises
+* **BTTH_01 - HTML & Git**
 
-*(Note: The folder names above are placeholders, please adjust them to match your actual directory structure).*
-
----
-
-## 🛠️ General Tech Stack
+## General Tech Stack
 Technologies used throughout the course:
 
-* **Languages:** Python, JavaScript, HTML5, CSS3.
-* **Frameworks:** Django (Backend), Bootstrap (Frontend).
-* **Database:** SQLite.
+* **Languages:** JavaScript, HTML5, CSS3.
+* **Frameworks:** Bootstrap (Frontend).
 * **Tools:** VS Code, Git/GitHub.
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 Since this repository contains multiple independent projects, you need to navigate to the specific project folder before running it.
 
@@ -59,7 +46,7 @@ Since this repository contains multiple independent projects, you need to naviga
 
 2.  Navigate to the project folder:
     ```bash
-    cd giadung_vn  # Replace with actual folder name
+    cd BTTH_01  # Replace with actual folder name
     ```
 
 3.  Install dependencies (if applicable):
@@ -74,5 +61,5 @@ Since this repository contains multiple independent projects, you need to naviga
 
 ---
 
-## 📝 License
+## License
 This repository is for educational purposes.
