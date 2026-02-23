@@ -28,7 +28,7 @@ This repository is organized into several modules/assignments:
 Technologies used throughout the course:
 
 * **Languages:** JavaScript, HTML5, CSS3.
-* **Frameworks:** Bootstrap (Frontend).
+* **Frameworks:** Bootstrap (Frontend), Django Python (Backend).
 * **Tools:** VS Code, Git/GitHub.
 
 ---
@@ -41,7 +41,7 @@ Since this repository contains multiple independent projects, you need to naviga
 
 1.  Clone the repository:
     ```bash
-    git clone [https://github.com/#####/#####.git](https://github.com/#####/#####.git)
+    git clone [https://github.com/DucAnh326/2026_CSE391_66TTNT1_TrieuDucAnh](https://github.com/DucAnh326/2026_CSE391_66TTNT1_TrieuDucAnh)
     ```
 
 2.  Navigate to the project folder:
