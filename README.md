@@ -23,6 +23,7 @@ This repository is organized into several modules/assignments:
 
 ### Labs & Exercises
 * **BTTH_01 - HTML & Git**
+* **BTTH_02 - CSS Selectors & FlexBoxes**
 
 ## General Tech Stack
 Technologies used throughout the course:
