@@ -5,6 +5,7 @@
     font-family: 'Quicksand';
 }
 
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -27,14 +28,20 @@ nav ul {
     list-style-type: none;
 }
 
+#page-logo a{
+    font-size: 24px;
+    color: rgb(252, 241, 94);
+    font-family:  'Oleo Script';
+    font-weight: 700;
+}
+
 a {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 18px;
 }
 
-
-
+/* Main */
 main {
     display: flex;
     flex-direction: column;
@@ -43,6 +50,7 @@ main {
     height: 94vh;
 }
 
+/* Main-Hero */
 #hero {
     display: flex;
     align-items: center;
@@ -75,8 +83,18 @@ main {
     font-size: small;
     font-weight: bold;
     border-radius: 5px ;
+    transition: ease 0.3s;
 }
 
+#hero-content a:hover {
+    transform: scale(1.05);
+}
+
+#hero-content a:active {
+    background-color: rgb(175, 163, 0);
+}
+
+/* Main-Highlights */
 #highlights {
     background-color: rgb(172, 245, 255);
     font-size: 16px;
@@ -107,8 +125,20 @@ img {
     height: 100px;
     object-fit: cover;
     border-radius: 10px;
+    transition: ease 0.3s;
 }
 
+img:hover {
+    transform: scale(1.05);
+}
+
+#highlights p {
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    font-family: 'Raleway';
+}
+
+/* Footer */
 footer {
     display: flex;
     flex-direction: row;
@@ -128,17 +158,4 @@ footer ul {
 footer img {
     width: 30px;
     height: 30px;
-}
-
-#highlights p {
-    font-size: 14px;
-    color: rgb(0, 0, 0);
-    font-family: 'Raleway';
-}
-
-#page-logo a{
-    font-size: 24px;
-    color: rgb(252, 241, 94);
-    font-family:  'Oleo Script';
-    font-weight: 700;
 }
