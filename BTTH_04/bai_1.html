@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý sinh viên</title>
+    <link rel="stylesheet" href="assets/css/style-bai_1.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Quản lý điểm</h2>
+        <div class="search">
+            <select name="filter" id="filter">
+                <option value="all">Tất cả</option>
+                <option value="excellent">Giỏi</option>
+                <option value="good">Khá</option>
+                <option value="average">Trung bình</option>
+                <option value="weak">Yếu</option>
+            </select>
+            <input type="text" id="searchInput" placeholder="Tìm kiếm theo tên...">
+        </div>
+        <div class="inputs">
+            <input type="text" id="name" placeholder="Họ tên...">
+            <input type="number" id="score" placeholder="Điểm (0-10)">
+            <button id="addBtn">Thêm</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Họ tên</th>
+                    <th>Điểm</th>
+                    <th>Xếp loại</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+
+        <div id="summary" class="summary">
+            Tổng: 0 | Điểm TB: 0
+        </div>
+    </div>
+
+    <script src="assets/script/script-bai_1.js"></script>
+</body>
+</html>
