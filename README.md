@@ -23,7 +23,9 @@ This repository is organized into several modules/assignments:
 
 ### Labs & Exercises
 * **BTTH_01 - HTML & Git**
-* **BTTH_02 - CSS Selectors & FlexBoxes**
+* **BTTH_02 - CSS**
+* **BTTH_03 - JavaScript basics**
+* **BTTH_04 - JavaScript DOM**
 
 ## General Tech Stack
 Technologies used throughout the course:
@@ -42,7 +44,7 @@ Since this repository contains multiple independent projects, you need to naviga
 
 1.  Clone the repository:
     ```bash
-    git clone [https://github.com/DucAnh326/2026_CSE391_66TTNT1_TrieuDucAnh](https://github.com/DucAnh326/2026_CSE391_66TTNT1_TrieuDucAnh)
+    git clone https://github.com/DucAnh326/2026_CSE391_66TTNT1_TrieuDucAnh
     ```
 
 2.  Navigate to the project folder:
@@ -50,7 +52,7 @@ Since this repository contains multiple independent projects, you need to naviga
     cd BTTH_01  # Replace with actual folder name
     ```
 
-3.  Run the file using html readers
+3.  Run the file using html readers or Go Live feature from Live Server extension.
 
 ---
 

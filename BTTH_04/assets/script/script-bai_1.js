@@ -1,5 +1,6 @@
 //---Initialization---
 let students = [];
+let sortDirection = 0; // 0: none, 1: asc, 2: desc
 
 const nameInput = document.getElementById('name');
 const scoreInput = document.getElementById('score');
@@ -8,6 +9,7 @@ const tableBody = document.getElementById('tableBody');
 const summary = document.getElementById('summary');
 const searchInput = document.getElementById('searchInput');
 const filterSelect = document.getElementById('filter'); 
+const scoreHeader = document.querySelector('th:nth-child(3)');
 
 //---Functions---
 function getRank(s) {
@@ -21,7 +23,19 @@ function render() {
     tableBody.innerHTML = '';
     let totalScore = 0;
 
-    students.forEach((item, index) => {
+    // Sắp xếp trên bản sao để không hỏng mảng gốc
+    let displayList = [...students];
+    if (sortDirection === 1) {
+        displayList.sort((a, b) => a.score - b.score);
+        scoreHeader.innerHTML = 'Điểm ▲';
+    } else if (sortDirection === 2) {
+        displayList.sort((a, b) => b.score - a.score);
+        scoreHeader.innerHTML = 'Điểm ▼';
+    } else {
+        scoreHeader.innerHTML = 'Điểm';
+    }
+
+    displayList.forEach((item, index) => {
         totalScore += item.score;
         const rank = getRank(item.score);
         
@@ -33,7 +47,7 @@ function render() {
             <td>${item.name}</td>
             <td>${item.score}</td>
             <td>${rank}</td>
-            <td><button class="del-btn" data-id="${index}">Xóa</button></td>
+            <td><button class="del-btn" data-id="${students.indexOf(item)}">Xóa</button></td>
         `;
         tableBody.appendChild(tr);
     });
@@ -52,23 +66,23 @@ function handleAdd() {
     }
 
     students.push({ name, score });
-    
     nameInput.value = '';
     scoreInput.value = '';
     nameInput.focus();
-    
     render();
 }
 
 function handleSearch() {
     const filter = searchInput.value.toLowerCase();
+    const rows = tableBody.querySelectorAll('tr:not(#searchResult)');
     let hasVisibleRows = false;
 
-    for (let i = 0; i < students.length; i++) {
-        const match = students[i].name.toLowerCase().indexOf(filter) > -1;
-        tableBody.children[i].style.display = match ? '' : 'none';
+    rows.forEach(row => {
+        const nameText = row.children[1].innerText.toLowerCase();
+        const match = nameText.indexOf(filter) > -1;
+        row.style.display = match ? '' : 'none';
         if (match) hasVisibleRows = true;
-    }
+    });
 
     noResultStatus(hasVisibleRows);
 }
@@ -84,6 +98,7 @@ function noResultStatus(hasVisibleRows) {
         tableBody.appendChild(tr);
     }
 }
+
 //---Event listeners---
 addBtn.onclick = handleAdd;
 
@@ -100,3 +115,23 @@ tableBody.onclick = (e) => {
 };
 
 searchInput.onkeyup = handleSearch;
+
+scoreHeader.style.cursor = 'pointer';
+scoreHeader.onclick = () => {
+    sortDirection = sortDirection === 1 ? 2 : 1;
+    render();
+};
+
+
+//---Initial render---
+//---Generate random data---
+const firstNames = ["Nguyễn", "Trần", "Lê", "Phạm", "Hoàng", "Vũ", "Võ", "Đặng", "Bùi", "Đỗ"];
+const lastNames = ["Anh", "Bình", "Chi", "Dũng", "Em", "Giang", "Hương", "Khánh", "Linh", "Minh"];
+
+for (let i = 0; i < 10; i++) {
+    const randomName = `${firstNames[Math.floor(Math.random() * firstNames.length)]} ${lastNames[Math.floor(Math.random() * lastNames.length)]}`;
+    const randomScore = parseFloat((Math.random() * 10).toFixed(1));
+    students.push({ name: randomName, score: randomScore });
+}
+render();
+//------------------------------------------------------

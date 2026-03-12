@@ -1,0 +1,39 @@
+:root {
+    --primary: #2563eb;
+    --error: #dc2626;
+    --success: #16a34a;
+    --warning: #f59e0b;
+    --border: #cbd5e1;
+    --bg-page: #f8fafc;
+}
+
+body { font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--bg-page); color: #1e293b; padding: 40px 20px; margin: 0; }
+#formContainer { background: #ffffff; max-width: 480px; margin: 0 auto; padding: 35px; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+.title { text-align: center; margin-top: 0; margin-bottom: 25px; color: #0f172a; }
+.form-group { margin-bottom: 20px; }
+label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; color: #475569; }
+
+input { width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px; box-sizing: border-box; font-size: 1rem; transition: 0.2s; }
+input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1); }
+input.invalid { border-color: var(--error); background: #fef2f2; }
+.error { color: var(--error); font-size: 0.75rem; display: block; margin-top: 4px; height: 14px; }
+
+/* Password UI */
+.password-wrapper { position: relative; }
+.toggle-btn { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--primary); cursor: pointer; font-size: 0.8rem; font-weight: bold; }
+.strength-meter { height: 8px; background: #e2e8f0; border-radius: 4px; margin-top: 8px; overflow: hidden; }
+#strengthBar { height: 100%; width: 0; transition: 0.4s ease-in-out; }
+
+/* Strength States */
+#strengthBar.weak { width: 33%; background: var(--error); }
+#strengthBar.medium { width: 66%; background: var(--warning); }
+#strengthBar.strong { width: 100%; background: var(--success); }
+
+/* Buttons & Radios */
+.radio-group { display: flex; gap: 15px; align-items: center; padding: 5px 0; }
+.label-inline { display: inline; font-weight: normal; margin: 0; }
+.radio-group input, .checkbox-container input { width: auto; cursor: pointer; }
+.checkbox-container { display: flex; align-items: center; gap: 10px; font-weight: normal; cursor: pointer; }
+.submit-btn { width: 100%; background: var(--primary); color: white; border: none; padding: 12px; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 1rem; transition: 0.2s; }
+.submit-btn:hover { background: #1d4ed8; }
+.success-screen { max-width: 480px; margin: 100px auto; text-align: center; background: white; padding: 50px; border-radius: 12px; box-shadow: 0 10px 15px rgba(0,0,0,0.1); color: var(--success); font-size: 1.4rem; font-weight: bold; }
